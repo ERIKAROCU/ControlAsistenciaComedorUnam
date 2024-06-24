@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;  /* Añadido para centrar contenido dentro del contenedor */
+    justify-content: flex-start; /* Alínea a la izquierda */
+    align-items: center;     /* Centra verticalmente */
+    width: 100%;
+    max-width: 900px; /* Limita el ancho máximo del contenido */
+    padding: 30px; /* Añade algo de padding para un mejor espacio */
+    margin-left: 20%; /* Añadido margen izquierdo para desplazar a la derecha */
+}
+
+.contenido-centro {
+    width: 100%;
+   
+}
+
+.boton1 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #0B3C7D;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.boton1:hover {
+    background-color: #FFD700;
+}
+
+.boton2:hover {
+    background-color: #FFD700;
+}
+
+.boton2 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    background-color: #0B3C7D;
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.boton1:active, .boton2:active {
+    transform: translateY(2px);
+}
+
+.cajas {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    outline: none;
+}
+
+.cajas2 {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    outline: none;
+}
+
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 0 0.5rem; /* Añade algo de espacio en los lados */
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+    width: 100%; /* Hace que la tabla ocupe todo el ancho del contenedor */
+    margin: 0 auto; /* Margen automático en los lados */
+    justify-content: right;
+    background-color: #fff;
+    border-radius: 20px;
+    border-collapse: collapse; /* Añadido para evitar espacios entre bordes */
+    border: 1; /* Elimina los bordes de la tabla */
+}
+
+td {
+    padding: 0.5rem; /* Añade algo de espacio alrededor de las celdas */
+}

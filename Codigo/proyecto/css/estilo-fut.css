@@ -1,0 +1,84 @@
+img {
+    width: 90px;
+    height: 60px;
+    /* Los siguientes estilos no tienen efecto en la etiqueta <img>, ya que se aplican a elementos de tipo flexbox (como contenedores flexibles). */
+    justify-content: center; /* Esto no tiene efecto en <img> */
+    align-items: center; /* Esto no tiene efecto en <img> */
+}
+
+/* Estilos generales para las tablas */
+table {
+    width: 70%; /* Ancho del 70% del contenedor padre */
+    border-collapse: collapse; /* Colapso de bordes para las celdas de la tabla */
+    font-family: Arial, sans-serif; /* Familia de fuentes para la tabla */
+}
+
+/* Estilos para las celdas */
+td {
+    padding: 10px; /* Relleno interno de las celdas */
+    border: 1px solid #ccc; /* Borde de 1px sólido con color #ccc */
+}
+
+/* Estilos para las filas impares */
+tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fondo de color gris claro para filas impares */
+}
+
+/* Estilos para la cabecera de la tabla */
+th {
+    background-color: #333; /* Fondo de color oscuro para la cabecera */
+    color: #fff; /* Texto blanco para la cabecera */
+    font-weight: bold; /* Fuente en negrita para la cabecera */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilo para el campo de texto */
+.texto {
+    width: 98%; /* Ancho del 98% del contenedor padre */
+    height: 100%; /* Altura del 100% del contenedor padre */
+}
+
+/* Estilo para el campo de texto con tamaño específico */
+.texto-N {
+    width: 85%; /* Ancho del 85% del contenedor padre */
+    height: 100%; /* Altura del 100% del contenedor padre */
+}
+
+/* Estilo para las tablas internas */
+.tabla1 {
+    width: 98%; /* Ancho del 98% del contenedor padre */
+    height: 98%; /* Altura del 98% del contenedor padre */
+}
+
+/* Estilo para centrar texto */
+.texto-centro {
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilo para campo de registro centrado */
+.texto-registro-centro {
+    text-align: center; /* Alineación del texto al centro */
+    width: 60%; /* Ancho del 60% del contenedor padre */
+    height: 100%; /* Altura del 100% del contenedor padre */
+    border: 0; /* Sin borde */
+    outline: 0; /* Sin contorno */
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto; /* Margen automático para centrar horizontalmente */
+}
+
+/* Estilo para todos los campos de entrada */
+input {
+    border: 0; /* Sin borde */
+    outline: 0; /* Sin contorno */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilo para eliminar el contorno de foco */
+input:focus {
+    outline: none !important; /* Eliminar contorno al enfocar el campo */
+}
+
+/* Estilo para una tabla de tamaño específico */
+.tamano-tabla {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+}

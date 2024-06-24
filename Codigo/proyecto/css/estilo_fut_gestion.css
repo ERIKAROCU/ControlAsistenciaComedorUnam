@@ -1,0 +1,181 @@
+:root {
+    --small-table-width: 30%;
+    --large-table-width: 70%;
+    --table-margin-left: 20px;
+    --large-table-margin-top: 0px;
+    --small-table-margin-top: 0%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-table {
+    width: var(--small-table-width);
+    margin-left: var(--table-margin-left);
+    margin-top: var(--small-table-margin-top);
+}
+
+.large-table {
+    width: var(--large-table-width);
+    margin-top: var(--large-table-margin-top);
+}
+
+img {
+    width: 90px;
+    height: 60px;
+}
+
+body{
+    background-color: #fff;
+}
+
+/* Estilos generales para las tablas */
+table {
+    width: 100%; /* Mantén esto consistente si quieres que ambas tablas tengan el mismo ancho */
+    border-collapse: collapse; 
+    font-family: Arial, sans-serif; 
+}
+
+.tabla-pequena{
+    border-collapse:separate; 
+    border: 2px solid #333;
+    font-family: Arial, sans-serif; 
+    border-spacing: 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+td, th {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2; 
+}
+
+th {
+    background-color: #333; 
+    color: #fff; 
+    font-weight: bold; 
+    text-align: left; 
+}
+
+/* Estilo para el campo de texto */
+.texto {
+    width: 98%; 
+    height: 100%; 
+}
+
+/* Estilo para el campo de texto con tamaño específico */
+.texto-N {
+    width: 85%; 
+    height: 100%; 
+}
+
+/* Estilo para las tablas internas */
+.tabla1 {
+    width: 98%; 
+    height: 98%; 
+}
+
+/* Estilo para centrar texto */
+.texto-centro {
+    text-align: center; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para campo de registro centrado */
+.texto-registro-centro {
+    text-align: center; 
+    width: 60%; 
+    height: 100%; 
+    border: 0; 
+    outline: 0; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* Estilo para todos los campos de entrada */
+input {
+    border: 0; 
+    outline: 0; 
+    text-align: center; 
+}
+
+/* Estilo para eliminar el contorno de foco */
+input:focus {
+    outline: none !important; 
+}
+
+/* Estilo para una tabla de tamaño específico */
+.tamano-tabla {
+    width: 100%; 
+}
+
+/* Estilos para los encabezados */
+h2 {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h4 {
+    text-align: left;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos para los botones */
+.color-boton-verde {
+    background-color: #47C545;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.color-boton-rojo {
+    background-color: #FA5A50;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #aef3b3; /* Amarillo oscuro rgba(255,199,1,1)*/
+}
+
+
+@media (max-width: 768px) {
+    .small-table {
+        width: 100%; /* Ancho completo en pantallas más pequeñas */
+        margin-left: 0;
+        margin-top: 10px; /* Ajuste de margen superior para espacio adicional */
+    }
+
+    .large-table {
+        width: 100%; /* Ancho completo en pantallas más pequeñas */
+        margin-top: 10px; /* Ajuste de margen superior */
+    }
+
+    .texto {
+        width: 95%; /* Ajuste de tamaño de campo de texto en pantallas pequeñas */
+    }
+
+    .color-boton-verde,
+    .color-boton-rojo {
+        width: 95%; /* Ajuste de ancho de botones en pantallas pequeñas */
+    }
+}

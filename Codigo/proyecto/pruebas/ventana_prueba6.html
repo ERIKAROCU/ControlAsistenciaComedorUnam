@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página</title>
+</head>
+<body>
+    <header>
+        <img src="../img/UNAM-SIN FONDO.png" class="logo">
+        <h1>Comedor Universitario - UNAM</h1>
+        <img src="../icono/salida.png" class="exit-icon">
+    </header>
+    <div id="sidebar">
+        <h2>Menú</h2>
+        <button onclick="cargarPostulaciones()" class="load-content texto-centro"><img src="../img/icono_gestion_postulantes.png" class="icono">Gestion de Postulantes</button>
+        <button onclick="cargarRegistro()" class="load-content texto-centro"><img src="../img/icono_control_asistencia.png" class="icono">Control de Asistencias</button>
+        <button onclick="cargarInasistencias()" class="load-content texto-centro"><img src="../img/icono_gestion_inasistencia.png" class="icono">Gestion de Inasistencias</button>
+    </div>
+    <div id="content">
+        <h1>Bienvenido a mi página</h1>
+        <iframe id="miIframe" src="pagina.php" width="100%" height="500px" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        function cargarPostulaciones() {
+            var iframe = document.getElementById('miIframe');
+            iframe.src = '../php/gestion_postulacion.php';
+        }
+
+        function cargarRegistro() {
+            var iframe = document.getElementById('miIframe');
+            iframe.src = 'registrar_asistencia.php';
+        }
+
+        function cargarInasistencias() {
+            var iframe = document.getElementById('miIframe');
+            iframe.src = '../php/gestion_justificacion.php';
+        }
+    </script>
+</body>
+</html>

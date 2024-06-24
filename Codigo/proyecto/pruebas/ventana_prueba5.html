@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo estudiante - UNAM</title>
+    <link rel="stylesheet" href="../css/ventanas.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .sidebar a {
+            display: block;
+            position: relative;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px; /* Ancho de la barra distintiva */
+            background-color: transparent; /* Color inicial de la barra */
+            transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+        }
+
+        .sidebar a.active::before {
+            background-color: #007bff; /* Color de la barra activa */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../img/UNAM-SIN FONDO.png" class="logo">
+        <h1>Comedor Universitario - UNAM</h1>
+        <img src="../icono/salida.png" class="exit-icon">
+    </header>
+    
+    <div class="sidebar">
+        <a href="#" data-url="../php/gestion_postulacion.php" class="load-content texto-centro"><img src="../img/icono_gestion_postulantes.png" class="icono">Gestion de Postulantes</a>
+        <a href="#" data-url="registrar_asistencia.php" class="load-content texto-centro"><img src="../img/icono_control_asistencia.png" class="icono">Control de Asistencias</a>
+        <a href="#" data-url="../php/gestion_justificacion.php" class="load-content texto-centro"><img src="../img/icono_gestion_inasistencia.png" class="icono">Gestion de Inasistencias</a>
+        <a href="#" onclick="loadContent('reportes.php')" class="texto-centro"><img src="../img/icono_gestion_reportes.png" class="icono">Gestion de Reportes</a>
+    </div>
+    
+    <div class="content" id="main-content">
+        <?php
+        // Contenido inicial por defecto
+        echo "<h2>Bienvenido</h2>";
+        echo "<p>Contenido inicial...</p>";
+        ?>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Función para cargar contenido dinámico
+            function loadContent(url) {
+                $.get(url, function(data) {
+                    $('#main-content').html(data);
+                });
+            }
+
+            // Evento delegado para capturar clics en enlaces del sidebar
+            $(document).on('click', '.sidebar a', function(e){
+                e.preventDefault();
+                $('.sidebar a').removeClass('active');
+                $(this).addClass('active');
+                var url = $(this).data('url');
+                loadContent(url); // Cargar el contenido del URL especificado
+            });
+
+        });
+    </script>
+</body>
+</html>

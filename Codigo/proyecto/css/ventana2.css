@@ -1,0 +1,138 @@
+/* Estilos generales */
+
+body {
+    display: flex; /* Utiliza flexbox para el diseño */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Estilos del encabezado */
+
+header {
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0;
+    width: 99%; /* Ancho del encabezado */
+    background-color: #233293; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alinea el texto al centro */
+    height: 75px; /* Altura del encabezado */
+    display: flex; /* Usa flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye uniformemente los elementos */
+    padding: 0 10px; /* Espaciado pequeño a los lados */
+}
+
+/* Estilos de la barra lateral */
+
+#sidebar {
+    width: 9%; /* Ancho del sidebar */
+    background-color: #ffffff; /* Color de fondo */
+    padding: 2px; /* Espaciado interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: fixed; /* Fija el sidebar al hacer scroll */
+    top: 75px; /* Distancia desde la parte superior */
+    height: calc(100vh - 75px); /* Altura calculada */
+    overflow-y: auto; /* Barra de desplazamiento vertical si es necesario */
+}
+
+/* Estilos de los enlaces dentro del sidebar */
+
+#sidebar a {
+    display: block; /* Convierte en bloque para ocupar todo el ancho */
+    color: black; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+#sidebar a:hover {
+    background-color: #ddd; /* Color de fondo al pasar el ratón */
+}
+
+button{
+    width: 100%;
+    height: 25%;
+    background-color: #ffffff;
+    border: none;
+}
+
+/* Estilos para los iconos */
+
+.icono {
+    width: 100px; /* Ancho del icono */
+    height: 100px; /* Altura del icono */
+    margin-right: 10px; /* Espaciado a la derecha */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+/* Estilos para el logo */
+
+.logo {
+    width: 90px; /* Ancho del logo */
+    height: 65px; /* Altura del logo */
+    margin-right: 10px; /* Espaciado a la derecha */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+/* Estilos para centrar texto */
+
+.texto-centro {
+    text-align: center; /* Centro el texto */
+}
+
+/* Estilos para el contenido principal */
+
+#content {
+    margin-top: 75px; /* Margen superior igual a la altura del encabezado */
+    margin-left: 9%; /* Margen izquierdo igual al ancho del sidebar */
+    padding: 20px; /* Espaciado interno */
+    flex: 1; /* Ocupa todo el espacio disponible */
+    background-color: #dfdfdf; /* Color de fondo */
+}
+
+h1, h2 {
+    margin: 0; /* Elimina el margen superior e inferior */
+}
+
+h2 {
+    margin-bottom: 20px; /* Espacio inferior para los encabezados h2 */
+}
+
+p {
+    line-height: 1.6; /* Altura de línea */
+}
+
+/* Estilos de los botones en el sidebar */
+#sidebar button {
+    position: relative; /* Añade posición relativa para que el pseudoelemento sea relativo a este */
+    text-align: left; /* Alineación del texto a la izquierda */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Quita el borde del botón */
+    background-color: transparent; /* Fondo transparente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave del color de fondo y texto */
+}
+
+/* Pseudoelemento para la barra azul */
+#sidebar button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px; /* Ancho de la barra azul */
+    background-color: transparent; /* Color inicial de la barra */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+/* Estilo cuando el botón está activo */
+#sidebar button.active::before {
+    background-color: #007bff; /* Color de la barra azul cuando el botón está activo */
+}
+
+/* Estilo cuando se pasa el ratón por encima */
+#sidebar button:hover {
+    background-color: #f0f0f0; /* Cambia el fondo del botón al pasar el ratón */
+}

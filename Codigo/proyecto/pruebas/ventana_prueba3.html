@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Gestión de Inasistencias</title>
+    <link rel="stylesheet" href="../css/styles2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" data-url="gestion_justificacion.php" class="load-content">Gestionar Justificaciones</a></li>
+            <li><a href="#" data-url="otros.php" class="load-content">Otra Funcionalidad</a></li>
+        </ul>
+    </nav>
+    <div id="content"></div>
+
+    <script>
+        $(document).ready(function(){
+            $('.load-content').on('click', function(e){
+                e.preventDefault();
+                const url = $(this).data('url');
+                $('#content').load(url, function(response, status, xhr){
+                    if(status === "error") {
+                        $('#content').html("<p>Hubo un error al cargar el contenido.</p>");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

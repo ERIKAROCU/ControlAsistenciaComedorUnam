@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Navbar y Sidebar</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Añadir un enlace a FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="../img/UNAM-SIN FONDO.png" alt="Logo UNAM">
+        </div>
+        <div class="navbar-center">
+            <a href="#">Universidad Nacional de Moquegua</a>
+        </div>
+        <div class="navbar-right">
+            <a href="#logout" class="logout-icon"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal para el contenido y la barra lateral -->
+    <div class="main-container">
+        <!-- Barra lateral izquierda -->
+        <aside class="sidebar">
+            <ul class="sidebar-links">
+                <a href="#postular"><img src="../img/icono_registro.png" alt="Icono Registro"><span>Postular</span></a>
+                <a href="#justificar"><img src="../img/icono_justificacion.png" alt="Icono Justificación"><span>Justificar Inasistencia</span></a>
+                <a href="#asistencia"><img src="../img/icono_asistencia.png" alt="Icono Asistencia"><span>Visualizar Asistencia</span></a>
+                
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <!-- Aquí va el contenido de tu página -->
+            <h1>Bienvenido a Mi Empresa</h1>
+            <p>Este es el contenido principal de la página.</p>
+        </div>
+    </div>
+</body>
+</html>

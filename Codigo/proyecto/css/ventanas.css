@@ -1,0 +1,90 @@
+/* ventanas.css */
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    background-color: #233293;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 75px;
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacia uniformemente los elementos */
+    padding: 0 10px; /* Añade un pequeño padding a los lados */
+}
+
+#sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    position: fixed; /* Cambiar 'fixed' por 'sticky' */
+    top: 75px; /* Altura del header */
+    bottom: 0;
+    width: 120px;
+    background-color: #ffffff;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+.icono {
+    width: 100px; /* Ajusta este valor para cambiar el tamaño del icono */
+    height: 100px;
+    margin-right: 10px;
+    vertical-align: middle; /* Alinea el icono con el texto */
+}
+
+.logo {
+    width: 90px; /* Ajusta este valor para cambiar el tamaño del icono */
+    height: 65px;
+    margin-right: 10px;
+    vertical-align: middle; /* Alinea el icono con el texto */
+}
+
+.texto-centro{
+    text-align: center;
+}
+
+.content {
+    margin-top: 75px; /* Altura del header */
+    margin-left: 120px; /* Ancho de la sidebar */
+    padding: 20px;
+    flex: 1;
+    background-color: #dfdfdf;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+}

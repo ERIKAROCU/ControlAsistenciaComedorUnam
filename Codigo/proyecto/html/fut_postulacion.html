@@ -1,0 +1,120 @@
+<!-- fut_postulacion.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUT</title>
+    <link rel="stylesheet" href="../css/estilo-fut.css">
+</head>
+<body>
+    <form action="../php/guardar_fut_postulacion.php" method="POST" enctype="multipart/form-data">
+
+        <h2>Postular para la Beca del Comedor Universitario</h2><br><br>
+
+        <h4>2024 - 1</h4>
+        <button type="submit">Enviar Solicitud</button>
+
+        <table>
+            <tr>
+                <td><img src="../img/UNAM-SIN FONDO.png" alt=""></td>
+                <td class="texto-centro">FORMULARIO ÚNICO DE TRÁMITE (FUT)</td>
+                <td>
+                    <table class="tabla1">
+                        <tr><td><input id="num_registro" class="texto" readonly></td></tr>
+                        <tr><td class="texto-centro">N° de Registro:</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr><td>I. SOLICITO:</td></tr>
+            <tr><td><input id="tipo_solicitud" name="tipo_solicitud" class="texto" required placeholder="Escribe aquí la solicitud"></td></tr>
+            <tr><td>II. DEPENDENCIA O AUTORIDAD A QUIEN SE DIRIGE LA SOLICITUD:</td></tr>
+            <tr><td><input id="solicitud_dirige" name="solicitud_dirige" class="texto" required placeholder="Escribe aquí a quién va dirigida la solicitud"></td></tr>
+        </table>
+
+        <table>
+            <tr><td colspan="4">IV. DATOS DEL SOLICITANTE:</td></tr>
+            <tr><td colspan="3">PERSONA NATURAL</td><td class="texto-centro">DOCUMENTO DE IDENTIDAD</td></tr>
+            <tr><td class="texto-centro">Apellido Paterno</td><td class="texto-centro">Apellido Materno</td><td class="texto-centro">Nombres</td><td>
+                <input type="radio" name="documento_ident_pers_nat" value="DNI" required>DNI
+                <input type="radio" name="documento_ident_pers_nat" value="L.E." required>L.E.
+                <input type="radio" name="documento_ident_pers_nat" value="C.E." required>C.E.
+                <input type="radio" name="documento_ident_pers_nat" value="OTRO" required>OTRO
+            </td></tr>
+            <tr><td><input id="apel_paterno_pers_nat" name="apel_paterno_pers_nat" class="texto" required placeholder="Apellido Paterno"></td><td><input id="apel_materno_pers_nat" name="apel_materno_pers_nat" class="texto" required placeholder="Apellido Materno"></td><td><input id="nombres_pers_nat" name="nombres_pers_nat" class="texto" required placeholder="Nombres"></td><td>N° <input id="num_doc_pers_nat" name="num_doc_pers_nat" class="texto-N" required placeholder="Número de documento"></td></tr>
+        </table>
+
+        <table>
+            <tr><td colspan="3">V. DIRECCION:</td></tr>
+            <tr><td colspan="3" class="texto-centro">DOMICILIO : AV. /CALLE / JIRÓN / DPTO. / MZ. / LOTE / URB.</td></tr>
+            <tr><td colspan="3"><input id="domicilio" name="domicilio" class="texto" required placeholder="Dirección completa"></td></tr>
+            <tr><td class="texto-centro">DISTRITO</td><td class="texto-centro">PROVINCIA</td><td class="texto-centro">DEPARTAMENTO</td></tr>
+            <tr><td><input id="distrito" name="distrito" class="texto" required placeholder="Distrito"></td><td><input id="provincia" name="provincia" class="texto" required placeholder="Provincia"></td><td><input id="departamento" name="departamento" class="texto" required placeholder="Departamento"></td></tr>
+            <tr><td>CORREO ELECTRONICO: <input type="email" id="email" name="email" class="texto" placeholder="Correo electrónico"></td><td>TELEFONO: <input id="telefono" name="telefono" class="texto" placeholder="Teléfono"></td><td>CELULAR: <input id="celular" name="celular" class="texto" placeholder="Celular"></td></tr>
+        </table>
+
+        <table>
+            <tr><td>VI. FUNDAMENTACION DE LA SOLICITUD (PETITORIO - Indicar en forma clara lo que se solicita):</td></tr>
+            <tr><td><textarea id="fundamento_solicitud" name="fundamento_solicitud" class="texto" required placeholder="Escribe aquí la fundamentación de la solicitud"></textarea></td></tr>
+        </table>
+
+        <table>
+            <tr><td>VII. ANEXOS (Relación de Documentos y Anexos que se adjunta):</td></tr>
+            <tr>
+                <td>
+                    <table style="width: 100%;">
+                        <tr><td colspan="2">Formatos</td></tr>
+                        <tr><td>Fut firmado</td><td><input type="file" name="fut_postulacion" id="fut_postulacion"></td></tr>
+                        <tr><td>Formato 1:</td><td><input type="file" name="formato1" id="formato1" required></td></tr>
+                        <tr><td>Formato 2:</td><td><input type="file" name="formato2" id="formato2" required></td></tr>
+                        <tr><td>Formato 3:</td><td><input type="file" name="formato3" id="formato3"></td></tr>
+                        <tr><td>Formato 4:</td><td><input type="file" name="formato4" id="formato4" required></td></tr>
+                        <tr><td colspan="2">Más Requisitos</td></tr>
+                        <tr><td>Ficha Socioeconomica</td><td><input type="file" name="ficha_socioec" id="ficha_socioec" required></td></tr>
+                        <tr><td>Copias de las boletas de pago (ingresos económicos de los padres y/o estudiantes)</td><td><input type="file" name="boleta_pago" id="boleta_pago"></td></tr>
+                        <tr><td>Copia legible del recibo de luz del domicilio actual del estudiante (no mayor a 3 meses)</td><td><input type="file" name="recibo_luz" id="recibo_luz" required></td></tr>
+                        <tr><td>Croquis de domicilio actual (Detallado y legible)</td><td><input type="file" name="croquis" id="croquis" required></td></tr>
+                        <tr><td>Recibo de Alquiler</td><td><input type="file" name="recibo_alquiler" id="recibo_alquiler"></td></tr>
+                        <tr><td style="width: 67.6%;">¿Desea subir más documentos?</td><td colspan="2"><input type="radio" id="od" name="od" value="SI" onclick="document.getElementById('myRow').style.display = ''" required>SI<input type="radio" id="od" name="od" value="NO" onclick="document.getElementById('myRow').style.display = 'none'">NO</td></tr>
+                        <tr id="myRow" style="display:none;">
+                            <td colspan="2">
+                                <table style="width: 100%;">
+                                    <tr><td>En caso de orfandad, presentar copia legible de acta o partida de defunción</td><td><input type="file" name="ficha_orfandad" id="ficha_orfandad"></td></tr>
+                                    <tr><td>En caso de que el estudiante tenga carga familiar (Adjuntar copia del DNI del cónyuge/conviviente e hijos)</td><td><input type="file" name="carga_fam" id="carga_fam"></td></tr>
+                                    <tr><td>Copia del carnet de CONADIS del estudiante, padres, hermanos con habilidades diferentes</td><td><input type="file" name="copia_conadis" id="copia_conadis"></td></tr>            
+                                    <tr><td>Denuncia policial por abandono de hogar</td><td><input type="file" name="denuncia_policial" id="denuncia_policial"></td></tr>
+                                    <tr><td>Demanda por alimentos</td><td><input type="file" name="demanda_alimentos" id="demanda_alimentos"></td></tr>
+                                    <tr><td>Cronograma de pagos de deuda bancaria</td><td><input type="file" name="deuda_bancaria" id="deuda_bancaria"></td></tr>
+                                    <tr><td>Resolución y/o certificado de separación de la municipalidad / DEMUNA y otros</td><td><input type="file" name="otros_documentos" id="otros_documentos"></td></tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+    
+            <table>
+                <tr>
+                    <td>
+                        <table class="tabla1">
+                            <tr><td><input type="text" id="codigo_estudiante" name="codigo_estudiante" class="texto-registro-centro" required placeholder="Código Estudiantil"></td></tr>
+                            <tr><td class="texto-centro">FIRMA DEL USUARIO (Código Estudiantil)</td></tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="tabla1">
+                            <tr><td>OBSERVACIONES:</td></tr>
+                            <tr><td><textarea id="observaciones" name="observaciones" class="texto" placeholder="Escribe aquí las observaciones"></textarea></td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+    
+        </form>
+    </body>
+    </html>
+    

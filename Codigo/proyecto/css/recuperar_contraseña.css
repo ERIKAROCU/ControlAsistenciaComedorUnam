@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-size: 14px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa la altura completa de la ventana */
+    margin: 0;
+    background-color: rgb(242, 242, 242); /* Fondo de la página para distinguir del contenido */
+  }
+  
+  .container {
+    width: 600px; /* Ajusta el ancho del contenedor */
+    height: 400px; /* Ajusta la altura del contenedor */
+    background: rgba(255, 255, 255, 1); /* Fondo blanco */
+    position: relative;
+    overflow: hidden;
+    padding: 20px; /* Espacio alrededor del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle algo de profundidad */
+  }
+  
+  .titulo { 
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Arial', sans-serif;
+    position: relative; /* Cambiado de absolute a relative */
+    font-size: 15px; /* Ajusta el tamaño de fuente */
+    font-weight: bold;
+    margin-bottom: 20px; /* Espacio debajo del título */
+    left: 0px; /* Mueve el contenedor y, por lo tanto, el enlace hacia la izquierda */
+    top: 120px;
+  }
+  
+  .dni {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Arial', sans-serif;
+    position: absolute; /* Cambiado de absolute a relative */
+    font-size: 14px; /* Ajusta el tamaño de fuente */
+    margin-bottom: 10px; /* Espacio debajo de la etiqueta DNI */
+    left: 20px; /* Mueve el contenedor y, por lo tanto, el enlace hacia la izquierda */
+    top: 205px;
+  }
+  
+  .mov{
+    font-size: 15px;
+    position: absolute; /* Asegura que el contenedor sea relativo para mover el enlace dentro de él */
+    left: 50px; /* Mueve el contenedor y, por lo tanto, el enlace hacia la izquierda */
+    top: 350px; /* Mueve el contenedor y, por lo tanto, el enlace hacia arriba */
+    }
+  
+  .dni_txt {
+    width: 220px; /* Anchura deseada */
+    height: 35px; /* Altura deseada */
+    position: relative; /* Cambiado a relative para posicionar de manera más flexible */
+    border: 1px solid #808080; /* Borde plomo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interior */
+    box-sizing: border-box; /* Incluir borde y padding en el tamaño total */
+    margin-bottom: 20px; /* Espacio debajo del campo de texto */
+    top: 180px; /* Posición vertical desde arriba */
+    left: 0px; /* Posición horizontal desde la izquierda */}
+  
+  .dni_txt input[type="text"] {
+    width: calc(100% - 20px); /* Ajustar el ancho del input descontando el padding */
+    height: 100%; /* Tomar toda la altura disponible */
+    border: none; /* Sin borde para el input */
+    background: none; /* Fondo transparente para el input */
+    font-family: Inter; /* Tipo de fuente */
+    font-size: 15px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    color: rgba(0, 0, 0, 1); /* Color de texto */
+    outline: none; /* Sin contorno al recibir foco */
+  }
+  
+  #btnEnviar {
+    position: absolute;
+    width: 220px; /* Anchura deseada */
+    height: 35px; /* Altura deseada */
+    background: rgba(11, 60, 125, 1);
+    color: #ffffff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    text-align: center; /* Alinear texto al centro */
+    display: block; /* Hacer que el botón sea un bloque para poder definir anchura y altura */
+    left: 20px; /* Margen izquierdo para mover horizontalmente */
+    top: 300px; /* Margen superior para mover verticalmente */
+  }
+  
+  #btnEnviar:hover {
+    background-color: #0056b3; /* Color de fondo azul más oscuro al pasar el ratón */
+    cursor: pointer; /* Cambiar cursor a mano */
+  }
+  
+  
+  .logo_unam {  /*LOGO UNAM*/
+    width: 170px;
+    height: 90px;
+    background: url("../img/logo_transparente_unam.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    overflow: hidden;
+  }
+  
+  .recuperar_contraseña {
+    background: url("../img/recuperar.jpg");
+    width: 500px;
+    height: 275px;
+    position: absolute; /* Asegúrate de que la posición sea correcta */
+    top: 60px;
+    left: 170px;
+    background-size: contain; /* Ajusta la imagen al tamaño del contenedor sin cortarla */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-position: center; /* Centra la imagen en el contenedor */
+  }
+  
+  
+  

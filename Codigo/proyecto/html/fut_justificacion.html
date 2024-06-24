@@ -1,0 +1,118 @@
+<!--fut_justificacion.html-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUT</title>
+    <link rel="stylesheet" href="../css/estilo-fut.css">
+</head>
+<body>
+    <form action="../php/guardar_fut_justificacion.php" method="POST" enctype="multipart/form-data">
+
+        <h2>Justificar Inasistencia</h2><br><br>
+
+        <h4>2024 - 1</h4>
+        <button type="submit">Enviar Justificacion</button>
+
+        <table>
+            <tr>
+                <td><img src="../img/UNAM-SIN FONDO.png" alt=""></td>
+                <td class="texto-centro">FORMULARIO ÚNICO DE TRÁMITE (FUT)</td>
+                <td>
+                    <table class="tabla1">
+                        <tr><td><input name="num_registro" id="num_registro" class="texto" placeholder="Número de Registro" readonly></td></tr>
+                        <tr><td class="texto-centro">N° de Registro:</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr><td>I. SOLICITO:</td></tr>
+            <tr><td><input name="tipo_solicitud" id="tipo_solicitud" class="texto"required placeholder="Solicita"></td></tr>
+            <tr><td>II. DEPENDENCIA O AUTORIDAD A QUIEN SE DIRIGE LA SOLICITUD:</td></tr>
+            <tr><td><input name="solicitud_dirige" id="solicitud_dirige" class="texto" required placeholder="A quien se dirige"></td></tr>
+        </table>
+
+        <table>
+            <tr><td colspan="4">IV. DATOS DEL SOLICITANTE:</td></tr>
+            <tr><td colspan="3">PERSONA NATURAL</td><td class="texto-centro">DOCUMENTO DE IDENTIDAD</td></tr>
+            <tr>
+                <td class="texto-centro">Apellido Paterno</td>
+                <td class="texto-centro">Apellido Materno</td>
+                <td class="texto-centro">Nombres</td>
+                <td>
+                    <input type="radio" name="documento_ident_pers_nat" value="DNI">DNI
+                    <input type="radio" name="documento_ident_pers_nat" value="L.E.">L.E.
+                    <input type="radio" name="documento_ident_pers_nat" value="C.E.">C.E.
+                    <input type="radio" name="documento_ident_pers_nat" value="OTRO">OTRO
+                </td>
+            </tr>
+            <tr>
+                <td><input name="apel_paterno_pers_nat" id="apel_paterno_pers_nat" class="texto" required placeholder="Apellido paterno"></td>
+                <td><input name="apel_materno_pers_nat" id="apel_materno_pers_nat" class="texto" required placeholder="Apellido materno"></td>
+                <td><input name="nombres_pers_nat" id="nombres_pers_nat" class="texto" required placeholder="Nombres"></td>
+                <td>N° <input name="num_doc_pers_nat" id="num_doc_pers_nat" class="texto-N" required placeholder="Numero de documento"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr><td colspan="3">V. DIRECCION:</td></tr>
+            <tr><td colspan="3" class="texto-centro">DOMICILIO : AV. /CALLE / JIRÓN / DPTO. / MZ. / LOTE / URB.</td></tr>
+            <tr><td colspan="3"><input name="domicilio" id="domicilio" class="texto" required placeholder="Direccion"></td></tr>
+            <tr>
+                <td class="texto-centro">DISTRITO</td>
+                <td class="texto-centro">PROVINCIA</td>
+                <td class="texto-centro">DEPARTAMENTO</td>
+            </tr>
+            <tr>
+                <td><input name="distrito" id="distrito" class="texto" required placeholder="Distrito"></td>
+                <td><input name="provincia" id="provincia" class="texto" required placeholder="Provincia"></td>
+                <td><input name="departamento" id="departamento" class="texto" required placeholder="Departamento"></td>
+            </tr>
+            <tr>
+                <td>CORREO ELECTRONICO: <input type="email" name="email" id="email" class="texto" required placeholder="Correo electronico"></td>
+                <td>TELEFONO: <input name="telefono" id="telefono" class="texto" required placeholder="Numero de telefono"></td>
+                <td>CELULAR: <input name="celular" id="celular" class="texto" required placeholder="Numero de celular"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr><td>VI. FUNDAMENTACION DE LA SOLICITUD (PETITORIO - Indicar en forma clara lo que se solicita):</td></tr>
+            <tr><td><textarea name="fundamento_solicitud" id="fundamento_solicitud" class="texto"  required placeholder="Fundamenta tu solicitud"></textarea></td></tr>
+        </table>
+
+        <table>
+            <tr><td>VII. ANEXOS (Documento de justificacion):</td></tr>
+            <tr>
+                <td>
+                    <table class="tabla1">
+                        <tr><td>Fut firmado</td>    <td><input type="file" name="fut_justificacion" id="fut_justificacion"></td></tr>
+                        <tr><td>Justificacion</td>  <td><input type="file" name="documento_justificacion" id="documento_justificacion"></td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <table class="tabla1">
+                        <tr><td><input name="codigo_estudiante" id="codigo_estudiante" class="texto-registro-centro"  required placeholder="Codigo estudiantil"></td></tr>
+                        <tr><td class="texto-centro">FIRMA DEL USUARIO (Codigo Estudiantil)</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tabla1">
+                        <tr><td>OBSERVACIONES:</td></tr>
+                        <tr><td><textarea name="observaciones" id="observaciones" class="texto"  required placeholder="Observaciones"></textarea></td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

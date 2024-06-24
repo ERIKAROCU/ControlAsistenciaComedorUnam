@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap"/>
+        <!-- <link rel="stylesheet" href="../css/login_estudiantes.css" /> -->
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="v162_96">
+                <div class="v162_100"></div>
+                <div class="v162_103"></div>
+                <span class="v162_104">Ingresar</span>
+                <span class="v162_118">UNIVERSIDAD NACIONAL DE MOQUEGUA</span>
+                <span class="v162_119">ADMINISTRADOR</span>
+                <div class="v162_120"></div> 
+                <div class="v228_142"></div>
+                <div class="v228_143"></div>
+                <div class="v228_146"></div>
+                <div class="imagen_contacto"></div>
+            </div>
+            <form action="../php/validar_credenciales_administrador.php" method="post">
+
+                <div class="usuario">
+                    <label for="dni_administrador">Usuario:</label><br>
+                </div>
+        
+                <div class="usuario_txt">
+                    <input type="text" id="dni_administrador" name="dni_administrador" placeholder="Ingrese su DNI" required>
+                </div>
+                
+                <div class="contrasena">  
+                    <label for="contrasena">Contraseña:</label><br> 
+                </div>
+        
+                <div class="usuario_contrasena">
+                    <input type="password" id="contrasena" name="contrasena" placeholder="********" required><br><br>
+                </div>
+            
+                <input type="submit" value="Iniciar Sesión" id="btnIniciarSesion"><br><br>
+
+                <div class="mov">
+                    <a href="formulario_recuperar_contrasena_administrador.html">Olvide mi contraseña</a>
+                </div>
+        
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ventanas.css">
+    <title>Modulo estudiante - UNAM</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .sidebar a {
+            display: block;
+            position: relative;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px; /* Ancho de la barra distintiva */
+            background-color: transparent; /* Color inicial de la barra */
+            transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+        }
+
+        .sidebar a.active::before {
+            background-color: #007bff; /* Color de la barra activa */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../img/UNAM-SIN FONDO.png" class="logo">
+        <h1>Comedor Universitario - UNAM</h1>
+        <img src="../icono/salida.png" class="exit-icon">
+    </header>
+    
+    <div class="sidebar">
+        <a href="#" onclick="loadContent('postular')" class="texto-centro"><img src="../img/icono_registro.png" class="icono">Postular</a>
+        <a href="#" onclick="loadContent('justificar')" class="texto-centro"><img src="../img/icono_justificacion.png" class="icono">Justificar Inasistencia</a>
+        <a href="#" onclick="loadContent('verasistencia')" class="texto-centro"><img src="../img/icono_asistencia.png" class="icono">Visualizar Asistencia</a>
+    </div>
+    
+    <div class="content" id="main-content">
+        <h2>Bienvenido</h2>
+        <p>Contenido inicial...</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.sidebar a').on('click', function(e){
+                e.preventDefault();
+
+                // Remover la clase 'active' de todos los enlaces
+                $('.sidebar a').removeClass('active');
+
+                // Agregar la clase 'active' al enlace clicado
+                $(this).addClass('active');
+
+                // Obtener el nombre de la sección del atributo 'onclick'
+                const section = $(this).attr('onclick').match(/loadContent\('(.+)'\)/)[1];
+                
+                // Cargar el contenido de la sección seleccionada
+                loadContent(section);
+            });
+
+            function loadContent(section) {
+                const contentUrls = {
+                    postular: '../html/fut_postulacion.html',
+                    justificar: '../html/fut_justificacion.html',
+                    verasistencia: 'verasistencia.html',
+                };
+
+                const url = contentUrls[section];
+
+                // Realizar la solicitud AJAX usando Fetch API
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('main-content').innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error al cargar el contenido:', error);
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

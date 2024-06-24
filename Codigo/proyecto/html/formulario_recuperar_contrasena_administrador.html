@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/recuperar_contraseña.css"/>
+    <title>Recuperar Contraseña - Administrador</title>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">
+            <label for="recuperar_contraseña">Recuperar Contraseña: </label><br>  
+        </div>
+
+        <div class="logo_unam"></div>
+        
+        <div class="recuperar_contraseña"></div>
+        
+        <form action="../php/procesar_recuperacion_administrador.php" method="post">
+            
+            <div class="dni">
+                <label for="dni_administrador">DNI:</label><br>
+            </div>
+
+            <div class="dni_txt">
+                <input type="text" id="dni_administrador" name="dni_administrador"  required><br><br>
+            </div>
+
+                <input type="submit" value="Enviar" id="btnEnviar"><br><br>
+
+            <div class="mov">
+            <a href="login_administrador.html">Volver al Inicio de Sesion</a>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/nueva_contraseña.css"/>
+    <title>Nueva Contraseña</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="logo_unam"></div>
+        <div class="titulo">
+            <h2>Recuperar Contraseña - Administrador</h2>
+        </div>
+        <div class="nueva_contraseña_imagen"></div>
+
+        <form action="../php/actualizar_contrasena_administrador.php" method="post">
+
+            <div class="codigo_recuperacion">
+                <label for="codigo_recuperacion">Código de Recuperación:</label><br>
+            </div>
+
+            <div class="codigo_txt">
+                <input type="text" id="codigo_recuperacion" name="codigo_recuperacion" required><br><br>
+            </div>
+
+            
+            <div class="nueva_contraseña">
+                <label for="nueva_contrasena">Nueva Contraseña:</label><br>
+            </div>
+
+            <div class="nueva_contraseña_txt">
+                <input type="password" id="nueva_contrasena" name="nueva_contrasena" required><br><br>
+            </div>
+
+
+            <div class="nueva_contraseña_repetir">
+                <label for="nueva_contrasena_repetir">Volver a escribir la Nueva Contraseña:</label><br>
+            </div>
+
+            <div class="nueva_contraseña_repetir_txt">
+                <input type="password" id="nueva_contrasena_repetir" name="nueva_contrasena_repetir"><br><br>
+            </div>
+            
+            <input type="submit" value="Guardar Nueva Contraseña" id="Guardar_Nueva_Contraseña"><br><br>
+           
+            <div class="mov">
+                <a href="login_administrador.html">Volver al Inicio de Sesion</a>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+</html>

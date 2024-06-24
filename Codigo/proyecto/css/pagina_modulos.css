@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 130vh; /* Ajusta al tamaño vertical de la pantalla */
+    font-family: 'Inter', Arial, sans-serif;
+    overflow-y: auto; /* Barra de desplazamiento vertical si es necesario */
+  
+  }
+  
+  .v1_3 {
+    width: 90%; /* O ajusta según sea necesario */
+    max-width: 1200px; /* Ancho máximo para evitar desbordamiento */
+    height: 1000px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
+    position: relative;
+    margin: 0 auto; /* Centra horizontalmente */
+  }
+  
+  
+  .v4_15 {
+    width: 196px;
+    height: 180px;
+    background: rgba(255, 253, 253, 1);
+    opacity: 1;
+    position: absolute;
+    top: 360px; /* Ajusta según sea necesario */
+    left: 165px; /* Ajusta según sea necesario */
+  }
+  
+  .v4_16 {
+    width: 181px;
+    height: 180px;
+    background: rgba(255, 250, 250, 1);
+    opacity: 1;
+    position: absolute;
+    top: 360px; /* Ajusta según sea necesario */
+    left: 452px; /* Ajusta según sea necesario */
+  }
+  
+  /* Estilo para texto v46_62, ajustado */
+  
+  .v46_62 {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 80%; /* Ajusta según sea necesario */
+    left: 40%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente */
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: medium;
+    font-size: 14px;
+    text-align: center; /* Alineación de texto centrada */
+    opacity: 1; /* Opacidad correcta */
+    margin-top: 85px; /* Espaciado superior */
+  }
+  
+  
+  .v46_62_2 { /* texto reivsa toda... */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 70%; /* Ajusta según sea necesario */
+    left: 64%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente */
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: medium;
+    font-size: 14px;
+    text-align: center; /* Alineación de texto centrada */
+    opacity: 1; /* Opacidad correcta */
+    margin-top: 185px; /* Espaciado superior */
+  }
+  
+  
+  /* Ajuste para imagen de fondo v4_34, utilizando ancho y altura en porcentajes */
+  
+  .v4_34 { /*IMAGEN DE ENCABEZADO */
+    width: 90%; 
+    height: 90px;
+    background: url("../img/v4_34.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 5%;
+    left: 5%; /* Ajusta según sea necesario */
+  }
+  
+  /* Ajuste para imagen v146_2, v146_3, v146_4, v46_61, v146_5 */
+  
+  .v146_2,
+  .v146_3,
+  .v146_4,
+  .v46_61,
+  .v146_5 {
+    position: absolute;
+  }
+  
+  .v146_2 { /*FACDBOOK*/
+    width: 117px;
+    height: 27px;
+    background: url("../img/v146_2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    top: 560px;
+    left: 120px;
+  }
+  
+  .v146_3 { /*UNAM*/
+    width: 166px;
+    height: 19px;
+    background: url("../img/v146_3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    top: 575px;
+    left: 960px;
+  }
+  
+  .v146_4 { /*PUNTOS */
+    width: 119px;
+    height: 17px;
+    background: url("../img/v146_4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    top: 680px;
+    left: 574px;
+  }
+  
+  .v46_61 {
+    width: 128px;
+    height: 135px;
+    background: url("../img/logo_estudiante.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 73%; /* Ajusta según sea necesario */
+    left: 34%; /* Ajusta según sea necesario */
+  }
+  
+  .v46_61_2 { 
+    width: 128px;
+    height: 140px;
+    background: url("../img/logo_administrador.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 73%; /* Ajusta según sea necesario */
+    left: 58%; /* Ajusta según sea necesario */
+  }
+  
+  
+  .v146_5 { /*IMAGEN DE MEDIO AMBINTE*/
+    width: 85%;
+    height: 370px;
+    background: url("../img/v146_5.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    top: 150px;
+    left: 8%; /* Ajusta según sea necesario */
+  }
+  
+
+  
+  .button-container2 {
+    position: absolute;
+    top: 86%;
+    left: 40%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente */
+  }
+  
+  
+  .button-container2 button {
+    background-color: rgba(3, 37, 126);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    margin-top: 60px;
+  }
+  
+  
+  .button-container2 button:hover {
+    background-color: rgb(11, 64, 198);
+  }
+  
+  .button-container3 {
+    position: absolute;
+    top: 86%;
+    left: 64%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente */
+  }
+  
+  
+  .button-container3 button {
+    background-color: rgba(3, 37, 126);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    margin-top: 60px;
+  }
+  
+  
+  .button-container3 button:hover {
+    background-color: rgb(11, 64, 198);
+  }
+  
+  

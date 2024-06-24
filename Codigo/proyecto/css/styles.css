@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E2E0E0; /* Fondo ligeramente gris */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #233293;
+    padding: 1rem;
+    position: fixed;
+    width: 98%;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Asegura que la barra de navegación se apile sobre la barra lateral */
+}
+
+.imgicono{
+    width: 60px; /* Tamaño del icono aumentado */
+    height: 60px; /* Tamaño del icono aumentado */
+    margin-bottom: 0.5rem; /* Añade espacio entre el icono y el texto */
+}
+
+.navbar-left img {
+    height: 50px; /* Ajusta la altura del logo según sea necesario */
+    margin-right: 1rem; /* Espacio a la derecha del logo */
+}
+
+.navbar-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar-center a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Asegura que el contenido de la derecha esté alineado a la derecha */
+}
+
+.navbar-right .logout-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar-right .logout-icon:hover {
+    color: #ccc; /* Cambia el color al pasar el mouse */
+}
+
+.main-container {
+    display: flex;
+    margin-top: 60px; /* Altura de la barra de navegación para evitar superposición */
+}
+
+.sidebar {
+    width: 100px;
+    background-color: #ffffff;
+    padding-top: 1rem;
+    position: sticky; /* Cambiar a sticky para que la barra lateral se mantenga fija */
+    top: 60px; /* Comienza donde termina la barra de navegación */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* Asegura que la barra lateral esté debajo de la barra de navegación */
+    height: calc(100vh - 60px); /* Ajusta la altura de la barra lateral */
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Asegura que los elementos ocupen todo el ancho de la barra lateral */
+}
+
+.sidebar-links li {
+    margin: 1rem 0;
+    text-align: center; /* Centra el texto */
+}
+
+.sidebar-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.8rem; /* Tamaño del texto reducido */
+    display: flex;
+    flex-direction: column; /* Coloca el icono encima del texto */
+    align-items: center;
+    padding: 1rem 0; /* Añade un poco de espacio alrededor del enlace */
+    justify-content: center;
+}
+
+.sidebar-links img {
+    width: 60px; /* Tamaño del icono aumentado */
+    height: 60px; /* Tamaño del icono aumentado */
+    margin-bottom: 0.5rem; /* Añade espacio entre el icono y el texto */
+}
+
+.sidebar-links a:hover {
+    background-color: #E2E0E0;
+}
+
+.content {
+    margin-left: 10px; /* Mismo ancho que la barra lateral */
+    padding: 2rem;
+    flex: 1;
+}
