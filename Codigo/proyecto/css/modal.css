@@ -1,0 +1,30 @@
+.modal {
+    display: none; /* Por defecto oculto */
+    position: fixed; /* Posición fija para que ocupe toda la pantalla */
+    z-index: 1000; /* Z-index alto para estar por encima del resto del contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 120%;
+    overflow: auto; /* Permite hacer scroll si el contenido es más grande */
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto; /* Ajustar la distancia desde la parte superior */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 100%;
+    height: 70%;
+    max-height: 100%; /* Aumentar la altura máxima del modal */
+    overflow: auto; /* Permitir desplazamiento si el contenido es más grande que el modal */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        width: 80%; /* Ancho del modal en dispositivos más grandes */
+    }
+}

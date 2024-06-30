@@ -1,0 +1,113 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Estilo del encabezado */
+h2 {
+    text-align: center;
+    color: #233293;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #ddd;
+}
+
+th {
+    background-color: #fff;
+    color: #233293;
+}
+
+td {
+    background-color: #ffffff;
+    /* border-color: #233293 */
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+td.empty {
+    background-color: #f4f4f9;
+    border: 1px solid #fff; /* Agrega borde blanco para las celdas vacías */
+}
+
+/* Estilo de los estados */
+td.estado {
+    border: 1px solid #fff; /* Agrega borde blanco alrededor de las celdas de estado */
+}
+
+td.asistio {
+    background-color: #4CAF50; /* Verde para Asistió */
+    color: #ffffff;
+}
+
+td.falta {
+    background-color: #F44336; /* Rojo para Falta */
+    color: #ffffff;
+}
+
+/* Estilo del formulario */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+form input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4A90E2;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+/* Estilo de los botones */
+button {
+    border-radius: 20px;
+    background-color: #233293;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #3987ee;
+}

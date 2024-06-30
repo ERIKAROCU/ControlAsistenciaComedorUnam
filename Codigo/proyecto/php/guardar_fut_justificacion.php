@@ -27,8 +27,8 @@ $observaciones = $_POST['observaciones'];
 $codigo_estudiante = $_POST['codigo_estudiante'];
 
 // Preparar la consulta SQL
-$sql = "INSERT INTO inasistencias_fut (solicitud, dependencia, nombres, apellido_paterno, apellido_materno, tipo_documento_identidad, numero_documento_identidad, direccion, distrito, provincia, departamento, email, telefono, celular, fundamento_solicitud, archivo_fut_justificacion, archivo_documento_justificacion, observacion, codigo_estudiante)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO inasistencias_fut (solicitud, dependencia, nombres, apellido_paterno, apellido_materno, tipo_documento_identidad, numero_documento_identidad, direccion, distrito, provincia, departamento, email, telefono, celular, fundamento_solicitud, archivo_fut_justificacion, archivo_documento_justificacion, observacion, codigo_estudiante, estado)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'ESPERA')";
 
 $stmt = $conn->prepare($sql);
 

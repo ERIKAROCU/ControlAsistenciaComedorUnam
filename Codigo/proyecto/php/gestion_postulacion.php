@@ -1,4 +1,4 @@
-// gestion_postulacion.php
+
 <?php
 require 'conexion.php';
 
@@ -12,8 +12,9 @@ $sql = "SELECT numero_documento_identidad AS DNI,
                archivo_recibo_luz, archivo_croquis, archivo_recibo_alquiler, archivo_acta_orfandad_defuncion, 
                archivo_carga_familiar, archivo_carnet_conadis, archivo_denuncia_policial_abandono_hogar, 
                archivo_demanda_alimentos, archivo_pagos_deuda_bancaria, archivo_separacion_municipalidad, 
-               observacion, codigo_estudiante 
-        FROM postulacion_registro_fut;";
+               observacion, codigo_estudiante, estado
+        FROM postulacion_registro_fut
+        WHERE estado = 'ESPERA';";
 
 $result = $conn->query($sql);
 ?>
@@ -118,9 +119,9 @@ $result = $conn->query($sql);
         <!-- PRIMERA TABLA (SMALL TABLE) -->
 
         <div class="small-table">
-        <center><button type="button" class="color-boton-verde">Aceptar</button></center>
+        <center><button type="button" class="color-boton-verde" onclick="actualizarEstado('aceptar')">Aceptar</button></center>
         <br><br>
-        <center><button type="button"class="color-boton-rojo">Rechazar</button></center>
+        <center><button type="button" class="color-boton-rojo" onclick="actualizarEstado('rechazar')">Rechazar</button></center>
         <br><br>
         <h3 class="texto-centro">Postulantes</h3>
         <br>
@@ -223,6 +224,38 @@ $result = $conn->query($sql);
             document.getElementById('demanda_alimentos').innerHTML = demanda_alimentos === '1' ? '<a href="../php/descarga_postulaciones/15_demanda_alimentos.php?id=' + id_registro + '">Descargar</a>' : 'Archivo no disponible';
             document.getElementById('pagos_deuda_bancaria').innerHTML = pagos_deuda_bancaria === '1' ? '<a href="../php/descarga_postulaciones/16_deuda_bancaria.php?id=' + id_registro + '">Descargar</a>' : 'Archivo no disponible';
             document.getElementById('separacion_municipalidad').innerHTML = separacion_municipalidad === '1' ? '<a href="../php/descarga_postulaciones/17_separacion_municipalidad.php?id=' + id_registro + '">Descargar</a>' : 'Archivo no disponible';
+        }
+    </script>
+
+    <script>
+        function actualizarEstado(accion) {
+            var id_registro = document.getElementById('num_registro').value;
+
+            if (!id_registro) {
+                alert("Por favor, seleccione un registro primero.");
+                return;
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "actualizar_estado_postulacion.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        if (xhr.responseText.trim() === "success") {
+                            alert("El estado ha sido actualizado correctamente.");
+                            location.reload(); // Recargar la página para reflejar los cambios
+                        } else {
+                            alert("Hubo un error al actualizar el estado: " + xhr.responseText);
+                        }
+                    } else {
+                        alert("Hubo un error con la solicitud: " + xhr.status);
+                    }
+                }
+            };
+
+            xhr.send("accion=" + accion + "&id_registro=" + id_registro);
         }
     </script>
 </body>

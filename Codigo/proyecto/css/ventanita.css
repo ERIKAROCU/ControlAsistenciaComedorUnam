@@ -1,0 +1,32 @@
+/* ventanita.css */
+
+.notification {
+    display: none; /* Ocultar la notificación inicialmente */
+    position: fixed;
+    top: 20px; /* Ajustar la posición en la parte superior */
+    right: 20px; /* Ajustar la posición en la parte derecha */
+    background-color: #fff;
+    border: 3px solid #0b9907;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 300px; /* Ancho máximo para la notificación */
+}
+
+.notification .icon {
+    width: 50%; /* Ancho del ícono ajustado */
+    height: 20%; /* Altura del ícono ajustada */
+    margin-right: 0px;
+}
+
+.notification .title {
+    font-weight: bold;
+    margin: 0;
+}
+.notification .message {
+    margin: 0; /* Corrige el error en la sintaxis de margin */
+    color: #666;
+    font-size: 18px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    text-align: center;
+}

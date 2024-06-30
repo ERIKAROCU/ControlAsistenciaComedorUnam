@@ -1,4 +1,3 @@
-// actualizar_contrasena.php
 <?php
 include_once 'conexion.php';
 
@@ -6,6 +5,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener datos del formulario
     $codigo_recuperacion = $_POST['codigo_recuperacion'];
     $nueva_contrasena = $_POST['nueva_contrasena'];
+    $nueva_contrasena_repetir = $_POST['nueva_contrasena_repetir'];
+
+    // Validar que las contraseñas coinciden
+    if ($nueva_contrasena !== $nueva_contrasena_repetir) {
+        echo "Las contraseñas no coinciden.";
+        exit;
+    }
 
     // Consulta para verificar el código de recuperación
     $sql = "SELECT dni_administrador FROM login_administracion WHERE codigo_recuperacion = '$codigo_recuperacion'";

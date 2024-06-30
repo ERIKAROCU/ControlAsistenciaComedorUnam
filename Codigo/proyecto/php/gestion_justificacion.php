@@ -5,7 +5,8 @@ $sql = "SELECT numero_documento_identidad AS DNI, CONCAT(nombres, ' ', apellido_
 id_registro, solicitud, dependencia, nombres, apellido_paterno, apellido_materno, tipo_documento_identidad,
 numero_documento_identidad, direccion, distrito, provincia, departamento, email, telefono, celular, fundamento_solicitud,
 archivo_fut_justificacion, archivo_documento_justificacion, observacion, codigo_estudiante
-FROM inasistencias_fut;";
+FROM inasistencias_fut
+WHERE estado = 'ESPERA' AND DATE(fecha) = CURDATE();";
 
 $result = $conn->query($sql);
 ?>
@@ -139,9 +140,9 @@ $result = $conn->query($sql);
          
 
         <div class="small-table">
-        <center><button type="button" class="color-boton-verde">Aceptar</button></center>
+        <center><button type="button" class="color-boton-verde" onclick="actualizarEstado('aceptar')">Aceptar</button></center>
         <br><br>
-        <center><button type="button"class="color-boton-rojo">Rechazar</button></center>
+        <center><button type="button" class="color-boton-rojo" onclick="actualizarEstado('rechazar')">Rechazar</button></center>
         <br><br>
         <h3 class="texto-centro">Estudiantes</h3>
         <br>
@@ -226,6 +227,38 @@ $result = $conn->query($sql);
             } else {
                 descargarJustificacion.innerHTML = '<span>Archivo no disponible</span>';
             }
+        }
+    </script>
+
+    <script>
+        function actualizarEstado(accion) {
+            var id_registro = document.getElementById('num_registro').value;
+
+            if (!id_registro) {
+                alert("Por favor, seleccione un registro primero.");
+                return;
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "actualizar_estado_inasistencia.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        if (xhr.responseText.trim() === "success") {
+                            alert("La asistencia ha sido actualizado correctamente.");
+                            location.reload(); // Recargar la página para reflejar los cambios
+                        } else {
+                            alert("Hubo un error al actualizar la asistencia: " + xhr.responseText);
+                        }
+                    } else {
+                        alert("Hubo un error con la solicitud: " + xhr.status);
+                    }
+                }
+            };
+
+            xhr.send("accion=" + accion + "&id_registro=" + id_registro);
         }
     </script>
 

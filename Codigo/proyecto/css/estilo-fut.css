@@ -1,84 +1,164 @@
-img {
-    width: 90px;
-    height: 60px;
-    /* Los siguientes estilos no tienen efecto en la etiqueta <img>, ya que se aplican a elementos de tipo flexbox (como contenedores flexibles). */
-    justify-content: center; /* Esto no tiene efecto en <img> */
-    align-items: center; /* Esto no tiene efecto en <img> */
-}
 
-/* Estilos generales para las tablas */
-table {
-    width: 70%; /* Ancho del 70% del contenedor padre */
-    border-collapse: collapse; /* Colapso de bordes para las celdas de la tabla */
-    font-family: Arial, sans-serif; /* Familia de fuentes para la tabla */
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-/* Estilos para las celdas */
-td {
-    padding: 10px; /* Relleno interno de las celdas */
-    border: 1px solid #ccc; /* Borde de 1px sólido con color #ccc */
-}
+        form {
+            width: 80%;
+            position: relative; /* Necesario si quieres usar position: absolute en los hijos */
+        }
 
-/* Estilos para las filas impares */
-tr:nth-child(odd) {
-    background-color: #f2f2f2; /* Fondo de color gris claro para filas impares */
-}
+        h2 {
+            position: absolute;
+            top: 10px; /* Ajusta este valor para mover verticalmente */
+            left: 50px; /* Ajusta este valor para mover horizontalmente */
+            text-align: center;
+            width: 100%;
+            color: #233293;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h4 {
+            position: absolute;
+            top: 80px; /* Ajusta este valor para mover verticalmente */
+            left: 0%; /* Ajusta este valor para mover horizontalmente */
+            text-align: left;
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-/* Estilos para la cabecera de la tabla */
-th {
-    background-color: #333; /* Fondo de color oscuro para la cabecera */
-    color: #fff; /* Texto blanco para la cabecera */
-    font-weight: bold; /* Fuente en negrita para la cabecera */
-    text-align: left; /* Alineación del texto a la izquierda */
-}
+        .semestre{
+            border: 1px solid black;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
+            width: 30%;
+            border-color: #0B3C7D;
+            height: 35px;
+        }
 
-/* Estilo para el campo de texto */
-.texto {
-    width: 98%; /* Ancho del 98% del contenedor padre */
-    height: 100%; /* Altura del 100% del contenedor padre */
-}
+        .enviar {
+            position: absolute;
+            top: 100px; /* Ajusta este valor para mover verticalmente */
+            left: 74%; /* Ajusta este valor para mover horizontalmente */
+            width: auto;
+        }
 
-/* Estilo para el campo de texto con tamaño específico */
-.texto-N {
-    width: 85%; /* Ancho del 85% del contenedor padre */
-    height: 100%; /* Altura del 100% del contenedor padre */
-}
+        .color-boton {
+            background-color: #0B3C7D;
+            color: #fff;
+            height: 40px;
+            border: 0;
+            border-radius: 20px;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
 
-/* Estilo para las tablas internas */
-.tabla1 {
-    width: 98%; /* Ancho del 98% del contenedor padre */
-    height: 98%; /* Altura del 98% del contenedor padre */
-}
+        .enviar2 {
+            position: absolute;
+            top: 150px; /* Ajusta este valor para mover verticalmente */
+            left: 68%; /* Ajusta este valor para mover horizontalmente */
+            width: auto;
+        }
 
-/* Estilo para centrar texto */
-.texto-centro {
-    text-align: center; /* Alineación del texto al centro */
-}
+        .texto-aviso {
+            color: #000000;
+            height: 40px;
+            border: 0;
+            border-radius: 20px;
+            font-size: 14px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
 
-/* Estilo para campo de registro centrado */
-.texto-registro-centro {
-    text-align: center; /* Alineación del texto al centro */
-    width: 60%; /* Ancho del 60% del contenedor padre */
-    height: 100%; /* Altura del 100% del contenedor padre */
-    border: 0; /* Sin borde */
-    outline: 0; /* Sin contorno */
-    display: block; /* Mostrar como bloque */
-    margin: 0 auto; /* Margen automático para centrar horizontalmente */
-}
+        button:hover {
+            background-color: #2081db;
+        }
 
-/* Estilo para todos los campos de entrada */
-input {
-    border: 0; /* Sin borde */
-    outline: 0; /* Sin contorno */
-    text-align: center; /* Alineación del texto al centro */
-}
+        .tabla {
+            width: 100%; /* Ancho del 80% del contenedor padre */
+            margin: 0 auto; /* Centrar la tabla horizontalmente */
+            border-collapse: collapse; /* Colapso de bordes para las celdas de la tabla */
+            font-family: Arial, sans-serif; /* Familia de fuentes para la tabla */
+            table-layout: fixed; /* Fijar el diseño de la tabla */
+            position: absolute; /* Necesario para mover con top y left */
+            top: 200px; /* Ajusta este valor para mover verticalmente */
+            left: 0%; /* Ajusta este valor para mover horizontalmente */
+        }
 
-/* Estilo para eliminar el contorno de foco */
-input:focus {
-    outline: none !important; /* Eliminar contorno al enfocar el campo */
-}
+        /* Estilos para las celdas */
+        td {
+            padding: 10px; /* Relleno interno de las celdas */
+            border: 1px solid #ccc; /* Borde de 1px sólido con color #ccc */
+        }
 
-/* Estilo para una tabla de tamaño específico */
-.tamano-tabla {
-    width: 100%; /* Ancho del 100% del contenedor padre */
-}
+        /* Estilos para las filas impares */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2; /* Fondo de color gris claro para filas impares */
+        }
+
+        /* Estilos para la cabecera de la tabla */
+        th {
+            background-color: #333; /* Fondo de color oscuro para la cabecera */
+            color: #fff; /* Texto blanco para la cabecera */
+            font-weight: bold; /* Fuente en negrita para la cabecera */
+            text-align: left; /* Alineación del texto a la izquierda */
+        }
+
+        /* Estilo para el campo de texto */
+        .texto {
+            width: 98%; /* Ancho del 98% del contenedor padre */
+            height: 100%; /* Altura del 100% del contenedor padre */
+        }
+
+        /* Estilo para el campo de texto con tamaño específico */
+        .texto-N {
+            width: 85%; /* Ancho del 85% del contenedor padre */
+            height: 100%; /* Altura del 100% del contenedor padre */
+        }
+
+        /* Estilo para las tablas internas */
+        .tabla1 {
+            width: 98%; /* Ancho del 98% del contenedor padre */
+            height: 98%; /* Altura del 98% del contenedor padre */
+        }
+
+        /* Estilo para centrar texto */
+        .texto-centro {
+            text-align: center; /* Alineación del texto al centro */
+        }
+
+        /* Estilo para campo de registro centrado */
+        .texto-registro-centro {
+            text-align: center; /* Alineación del texto al centro */
+            width: 60%; /* Ancho del 60% del contenedor padre */
+            height: 100%; /* Altura del 100% del contenedor padre */
+            border: 0; /* Sin borde */
+            outline: 0; /* Sin contorno */
+            display: block; /* Mostrar como bloque */
+            margin: 0 auto; /* Margen automático para centrar horizontalmente */
+        }
+
+        /* Estilo para todos los campos de entrada */
+        input {
+            border: 0; /* Sin borde */
+            outline: 0; /* Sin contorno */
+            text-align: center; /* Alineación del texto al centro */
+        }
+
+        /* Estilo para eliminar el contorno de foco */
+        input:focus {
+            outline: none !important; /* Eliminar contorno al enfocar el campo */
+        }
+
+        /* Estilo para una tabla de tamaño específico */
+        .tamano-tabla {
+            width: 100%; /* Ancho del 100% del contenedor padre */
+        }
+
+        img {
+            width: 90px;
+            height: 60px;
+        }

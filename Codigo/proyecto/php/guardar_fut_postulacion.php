@@ -75,8 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
              archivo_ficha_socioeconomica, archivo_copia_boleta_pago, archivo_recibo_luz, archivo_croquis, 
              archivo_recibo_alquiler, archivo_acta_orfandad_defuncion, archivo_carga_familiar, archivo_carnet_conadis, 
              archivo_denuncia_policial_abandono_hogar, archivo_demanda_alimentos, archivo_pagos_deuda_bancaria, 
-             archivo_separacion_municipalidad, observacion, codigo_estudiante)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+             archivo_separacion_municipalidad, observacion, codigo_estudiante, estado)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'ESPERA')";
     
     // Preparar la declaración
     $stmt = $conn->prepare($sql);

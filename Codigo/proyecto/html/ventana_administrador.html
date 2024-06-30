@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi Página</title>
-    <link rel="stylesheet" href="../css/ventana2.css">
+    <link rel="stylesheet" href="../css/ventanas_usuarios.css">
 </head>
 <body>
     <header>
         <img src="../img/unamnofondo2.png" class="logo">
         <h1>Comedor Universitario - UNAM</h1>
-        <img src="../icono/salida.png" class="exit-icon">
+        <a href="login_administrador.html">
+            <img src="../icono/salida.png" class="exit-icon">
+        </a>
     </header>
     <div id="sidebar">
-        <button onclick="cargarPostulaciones()" class="load-content texto-centro"><img src="../img/icono_gestion_postulantes.png" class="icono">Gestion de Postulantes</button>
-        <button onclick="cargarRegistro()" class="load-content texto-centro"><img src="../img/icono_control_asistencia.png" class="icono">Control de Asistencias</button>
-        <button onclick="cargarInasistencias()" class="load-content texto-centro"><img src="../img/icono_gestion_inasistencia.png" class="icono">Gestion de Inasistencias</button>
+        <button onclick="cargarPostulaciones()" class="load-content texto-centro"><img src="../img/icono_gestion_postulantes.png" class="icono"><br><center>Gestion de Postulantes</center></button>
+        <button onclick="cargarRegistro()" class="load-content texto-centro"><img src="../img/icono_control_asistencia.png" class="icono"><br><center>Control de Asistencias</center></button>
+        <button onclick="cargarInasistencias()" class="load-content texto-centro"><img src="../img/icono_gestion_inasistencia.png" class="icono"><br><center>Gestion de Inasistencias</center></button>
     </div>
     <div id="content">
         <iframe id="miIframe" src="pagina.php" width="100%" height="500px" frameborder="0"></iframe>

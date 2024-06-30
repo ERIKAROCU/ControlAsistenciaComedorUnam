@@ -118,6 +118,7 @@ input:focus {
 /* Estilos para los encabezados */
 h2 {
     text-align: center;
+    color: #233293;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -154,7 +155,7 @@ h4 {
 }
 
 button:hover {
-    background-color: #aef3b3; /* Amarillo oscuro rgba(255,199,1,1)*/
+    background-color: #507fee; /* Amarillo oscuro rgba(255,199,1,1)*/
 }
 
 

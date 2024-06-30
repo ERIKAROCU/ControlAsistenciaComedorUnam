@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/nueva_contraseña.css"/>
-    <title>Nueva Contraseña</title>
+    <title>Nueva Contraseña - Administrador</title>
+    <script>
+        function validarFormulario() {
+            var nuevaContrasena = document.getElementById("nueva_contrasena").value;
+            var nuevaContrasenaRepetir = document.getElementById("nueva_contrasena_repetir").value;
+
+            if (nuevaContrasena !== nuevaContrasenaRepetir) {
+                alert("Las contraseñas no coinciden.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
-    
     <div class="container">
         <div class="logo_unam"></div>
         <div class="titulo">
@@ -14,7 +25,7 @@
         </div>
         <div class="nueva_contraseña_imagen"></div>
 
-        <form action="../php/actualizar_contrasena_administrador.php" method="post">
+        <form action="../php/actualizar_contrasena_administrador.php" method="post" onsubmit="return validarFormulario();">
 
             <div class="codigo_recuperacion">
                 <label for="codigo_recuperacion">Código de Recuperación:</label><br>
@@ -24,7 +35,6 @@
                 <input type="text" id="codigo_recuperacion" name="codigo_recuperacion" required><br><br>
             </div>
 
-            
             <div class="nueva_contraseña">
                 <label for="nueva_contrasena">Nueva Contraseña:</label><br>
             </div>
@@ -33,23 +43,21 @@
                 <input type="password" id="nueva_contrasena" name="nueva_contrasena" required><br><br>
             </div>
 
-
             <div class="nueva_contraseña_repetir">
                 <label for="nueva_contrasena_repetir">Volver a escribir la Nueva Contraseña:</label><br>
             </div>
 
             <div class="nueva_contraseña_repetir_txt">
-                <input type="password" id="nueva_contrasena_repetir" name="nueva_contrasena_repetir"><br><br>
+                <input type="password" id="nueva_contrasena_repetir" name="nueva_contrasena_repetir" required><br><br>
             </div>
-            
+
             <input type="submit" value="Guardar Nueva Contraseña" id="Guardar_Nueva_Contraseña"><br><br>
-           
+
             <div class="mov">
-                <a href="login_administrador.html">Volver al Inicio de Sesion</a>
+                <a href="login_administrador.html">Volver al Inicio de Sesión</a>
             </div>
 
         </form>
-
     </div>
 </body>
 </html>
