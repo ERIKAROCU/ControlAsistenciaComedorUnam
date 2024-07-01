@@ -26,12 +26,10 @@ if ($result->num_rows > 0) {
         
         exit();
     } else {
-        // Credenciales inválidas
-        echo "<script>alert('Credenciales inválidas'); window.location.href = '../html/login_administrador.html';</script>";
+        header("Location: ../html/login_administrador.html?error=1");
     }
 } else {
-    // DNI no encontrado
-    echo "<script>alert('Credenciales inválidas'); window.location.href = '../html/login_administrador.html';</script>";
+    header("Location: ../html/login_administrador.html?error=1");
 }
 
 // Cerrar conexión
