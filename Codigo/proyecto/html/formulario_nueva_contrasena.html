@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/nueva_contraseña.css"/>
-    <title>Nueva Contraseña</title>
+    <link rel="stylesheet" href="../css/notificacion-invalida.css"/>
+    <title>Nueva Contraseña - Estudiante</title>
     <script>
         function validarFormulario() {
             var nuevaContrasena = document.getElementById("nueva_contrasena").value;
@@ -21,7 +22,7 @@
     <div class="container">
         <div class="logo_unam"></div>
         <div class="titulo">
-            <h2>Recuperar Contraseña</h2>
+            <h2><center>Nueva Contraseña - Estudiante</center></h2>
         </div>
         <div class="nueva_contraseña_imagen"></div>
 
@@ -59,5 +60,22 @@
 
         </form>
     </div>
+
+    <div id="notification" class="notification" style="display: none;">
+        <table>
+            <tr>
+                <td>
+                    <img src="../img/equis.jpg" alt="Éxito" class="icon"><br>
+                </td>
+                <td>
+                    <div>
+                        <p class="title">Error!</p>
+                        <p class="message">Codigo de recuperacion no valido</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="../js/notificaciones.js"></script>
 </body>
 </html>

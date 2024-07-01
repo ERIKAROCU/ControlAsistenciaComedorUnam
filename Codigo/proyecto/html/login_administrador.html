@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap"/>
         <link rel="stylesheet" href="../css/login_estudiantes.css" />
+        <link rel="stylesheet" href="../css/notificacion-invalida.css" />
         <title>Document</title>
     </head>
     <body>
@@ -46,5 +47,23 @@
         
             </form>
         </div>
+
+        <div id="notification" class="notification" style="display: none;">
+            <table>
+                <tr>
+                    <td>
+                        <img src="../img/equis.jpg" alt="Éxito" class="icon"><br>
+                    </td>
+                    <td>
+                        <div>
+                            <p class="title">Acceso Prohibido!</p>
+                            <p class="message">Credenciales inválidas</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="../js/notificaciones.js"></script>
+
     </body>
 </html>
