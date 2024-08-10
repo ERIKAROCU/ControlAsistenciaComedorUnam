@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Error al actualizar la contraseña.";
         }
     } else {
-        echo "Código de recuperación inválido.";
+        header("Location: ../html/formulario_nueva_contrasena_administrador.html?error=1");
     }
 
     // Cerrar conexión

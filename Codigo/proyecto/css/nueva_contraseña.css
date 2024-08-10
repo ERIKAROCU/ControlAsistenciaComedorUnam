@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
   }
-  
+  h2{
+    text-align: center;
+  }
+
   body {
     font-size: 14px;
     display: flex;
@@ -75,7 +78,7 @@
   .nueva_contraseña
   {
     color: rgba(0, 0, 0, 1);
-    font-family: 'Arial', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute; /* Cambiado de absolute a relative */
     font-size: 13px; /* Ajusta el tamaño de fuente */
     margin-bottom: 10px; /* Espacio debajo de la etiqueta DNI */
@@ -86,7 +89,7 @@
   .nueva_contraseña_repetir
   {
     color: rgba(0, 0, 0, 1);
-    font-family: 'Arial', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute; /* Cambiado de absolute a relative */
     font-size: 13px; /* Ajusta el tamaño de fuente */
     margin-bottom: 10px; /* Espacio debajo de la etiqueta DNI */
@@ -199,4 +202,9 @@
   position: absolute; /* Asegura que el contenedor sea relativo para mover el enlace dentro de él */
   left: 215px; /* Mueve el contenedor y, por lo tanto, el enlace hacia la izquierda */
   top: 600px; /* Mueve el contenedor y, por lo tanto, el enlace hacia arriba */
+  }
+
+  a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
   }

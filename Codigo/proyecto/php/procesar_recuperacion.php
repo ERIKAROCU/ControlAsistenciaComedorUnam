@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Error al actualizar la base de datos.";
         }
     } else {
-        echo "DNI no encontrado.";
+        header("Location: ../html/formulario_recuperar_contrasena.html?error=1");
     }
 
     // Cerrar conexión

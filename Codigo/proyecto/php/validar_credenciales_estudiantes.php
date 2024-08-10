@@ -17,10 +17,10 @@ if ($result->num_rows > 0) {
         header("Location: ../php/ventana_estudiante.php");
         exit();
     } else {
-        echo "Credenciales inválidas";
+        header("Location: ../html/login_estudiantes.html?error=1");
     }
 } else {
-    echo "Credenciales inválidas";
+    header("Location: ../html/login_estudiantes.html?error=1");
 }
 
 $conn->close();
